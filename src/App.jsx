@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Card from './components/Card';
 
 function App() {
   const initialPersons = [
@@ -28,6 +29,9 @@ function App() {
         <input type="text" id="newIdeas" name="newIdeas" />
         <button>Submit</button>
       </form>
+      {personsToSendAGift.map((person, index) => (
+        <Card key={index} personToBeGifted={person} />
+      ))}
     </div>
   );
 }
