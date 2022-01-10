@@ -16,7 +16,6 @@ function App() {
     const newIdeasArray = newIdeasString.split(', ');
     const newPersonObject = { name: newPerson, ideas: newIdeasArray };
     setPersonsToSendAGift([...personsToSendAGift, newPersonObject]);
-    console.log(personsToSendAGift);
   }
 
   return (
@@ -25,7 +24,7 @@ function App() {
       <form onSubmit={handleSubmit}>
         <label htmlFor="newPerson">Add a new person</label>
         <input type="text" id="newPerson" name="newPerson" />
-        <label htmlFor="newIdeas">Add your ideas</label>
+        <label htmlFor="newIdeas">Add your ideas (separated by commas)</label>
         <input type="text" id="newIdeas" name="newIdeas" />
         <button>Submit</button>
       </form>
