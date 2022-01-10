@@ -13,9 +13,6 @@ function App() {
   return (
     <div className="App">
       <h1>Weihnachts-Ideen</h1>
-      {personsToSendAGift.map((person, index) => (
-        <Card key={index} personToBeGifted={person} />
-      ))}
     </div>
   );
 }
